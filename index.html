@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Nada ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(135deg,#ff6a88,#ff99ac);
+  color:white;
+  text-align:center;
+  overflow:hidden;
+}
+
+.page{
+  display:none;
+  padding:60px 20px;
+  animation:fade 0.8s ease;
+}
+
+.active{
+  display:block;
+}
+
+img{
+  width:260px;
+  height:260px;
+  object-fit:cover;
+  border-radius:20px;
+  margin:20px 0;
+  box-shadow:0 0 35px rgba(255,255,255,0.7);
+  transition:0.4s;
+}
+
+img:hover{
+  transform:scale(1.05);
+}
+
+button{
+  padding:14px 28px;
+  margin:10px;
+  border:none;
+  border-radius:40px;
+  font-size:16px;
+  cursor:pointer;
+  background:white;
+  color:#ff4e91;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#ff4e91;
+  color:white;
+}
+
+.flowers{
+  font-size:42px;
+  margin:20px 0;
+}
+
+.love-text{
+  max-width:650px;
+  margin:auto;
+  font-size:20px;
+  line-height:1.7;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:scale(0.95);}
+  to{opacity:1;transform:scale(1);}
+}
+
+</style>
+</head>
+<body>
+
+<div id="home" class="page active">
+  <h1>For My Beautiful Nada ❤️</h1>
+  <img src="PUT_MAIN_PICTURE_HERE">
+  <br>
+  <button onclick="showPage('gift1')">💌 Love Letter</button>
+  <button onclick="showPage('gift2')">✨ Our Future</button>
+  <button onclick="showPage('gift3')">🌸 Flower Surprise</button>
+</div>
+
+<div id="gift1" class="page">
+  <h1>My Love Letter 💌</h1>
+  <p class="love-text">
+    Nada, meeting you was the most beautiful surprise of my life.
+    Even with distance between us, my heart feels closer to you every single day.
+  </p>
+  <button onclick="showPage('home')">⬅ Back</button>
+</div>
+
+<div id="gift2" class="page">
+  <h1>Our Future Together ✨</h1>
+  <p class="love-text">
+    One day distance will disappear,
+    and I will finally hold your hand without counting the miles.
+  </p>
+  <button onclick="showPage('home')">⬅ Back</button>
+</div>
+
+<div id="gift3" class="page">
+  <h1>For The Most Beautiful Flower 🌸</h1>
+  <div class="flowers">🌸🌷🌹🌺🌻🌼</div>
+  <img src="PUT_FLOWER_PICTURE_HERE">
+  <p class="love-text">
+    Nada, you are more beautiful than every flower in this world.
+    Loving you is the best thing that ever happened to me.
+  </p>
+  <button onclick="showPage('home')">⬅ Back</button>
+</div>
+
+<script>
+function showPage(pageId){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(pageId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
